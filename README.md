@@ -1,1 +1,1 @@
-# React Workshow by Knowit
+# React Workshop by Knowit
