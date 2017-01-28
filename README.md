@@ -14,22 +14,31 @@ For this workshop we recommend Atom but you can use whetever you want.
 Get latest nodejs [here](https://nodejs.org/en/download/), npm will be installed with nodejs.
 
 ### Check nodejs version
+```sh
   $ node -v
   v4.X.X
   $ npm -v
   v3.X.X
-  
+```
+
 ## Install 
+```sh
   $ git clone https://github.com/knowit/reactworkshop
   $ cd reactworkshop
   $ npm install
+```
 
 ## Start
+```sh
   $ npm start
+```
 
 ## Test
+```sh
   $ npm run test
+```
 
 ## Build for production
+```sh
   $ npm run build
-
+```
