@@ -37,5 +37,4 @@ class ProductFilter extends Component {
   }
 }
 
-
 export default ProductFilter;

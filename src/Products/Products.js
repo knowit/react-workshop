@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ProductList from './ProductList'
 import ProductFilter from './ProductFilter'
-
 import './Products.css'
+
 
 export default class Products extends Component {
   constructor(props) {
