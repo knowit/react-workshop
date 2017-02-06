@@ -1,7 +1,9 @@
 .Products table {
-		margin: 0 auto;
+	margin: 0 auto;
+	border-color: #009682;
+	border-collapse: collapse;
 }
-table {
+table tr {
 	border-bottom: 1px solid #009682;
 }
 img {
