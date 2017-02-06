@@ -2,10 +2,9 @@ import React from 'react';
 
 const Product = ({id, name, price, img}) => (
   <tr>
-    <td>{id}</td>
     <td>{name}</td>
     <td>{price}</td>
-    <td>{img}</td>
+    <td><img src={img}/></td>
   </tr>);
 
 const ProductList = ({products, filter}) => {
@@ -16,7 +15,6 @@ const ProductList = ({products, filter}) => {
     <table>
       <thead>
         <tr>
-          <th>ID#</th>
           <th>Name</th>
           <th>Price</th>
           <th></th>

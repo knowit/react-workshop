@@ -1,3 +1,7 @@
 .Products table {
-		margin: 0 auto; 
+		margin: 0 auto;
+}
+
+img {
+	width: 30%;
 }
