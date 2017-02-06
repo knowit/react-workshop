@@ -19,6 +19,7 @@ export default class Products extends Component {
       filter: ''
     }
     this.handleFilterChange = this.handleFilterChange.bind(this);
+    this.handleDeleteProduct = this.handleDeleteProduct.bind(this);
   }
 
   /**
@@ -26,6 +27,12 @@ export default class Products extends Component {
   */
   handleFilterChange(filterText){
     this.setState({ filter: filterText });
+  }
+
+  handleDeleteProduct(productId) {
+    this.setState(prevState => ({ 
+      products: prevState.products.filter(product => (product.id !== productId))
+    }));
   }
 
   render() {
@@ -36,7 +43,7 @@ export default class Products extends Component {
           filterText={this.state.filter}
         />
         <h2>Products</h2>
-        <ProductList {...this.state} />
+        <ProductList products={this.state.products} filter={this.state.filter} deleteHandler={this.handleDeleteProduct} />
         <Button >Hei</Button>
       </div>
     )
