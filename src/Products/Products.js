@@ -18,17 +18,23 @@ export default class Products extends Component {
       ],
       filter: ''
     }
-    this.filterHandler = this.filterHandler.bind(this);
+    this.handleFilterChange = this.handleFilterChange.bind(this);
   }
 
-  filterHandler(value){
-    this.setState({ filter: value });
+  /**
+  * Whenever the filter changes, call this to update the filter text in the component's state
+  */
+  handleFilterChange(filterText){
+    this.setState({ filter: filterText });
   }
 
   render() {
     return (
       <div className="Products">
-        <ProductFilter changeHandler={this.filterHandler} />
+        <ProductFilter
+          onFilterChange={this.handleFilterChange}
+          filterText={this.state.filter}
+        />
         <h2>Products</h2>
         <ProductList {...this.state} />
         <Button >Hei</Button>

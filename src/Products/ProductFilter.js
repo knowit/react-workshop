@@ -2,33 +2,35 @@ import React, { Component, PropTypes } from 'react';
 
 class ProductFilter extends Component {
   static propTypes = {
-    changeHandler: PropTypes.func.isRequired,
+    onFilterChange: PropTypes.func.isRequired,
+    filterText: PropTypes.string.isRequired,
   }
 
   constructor(props) {
     super(props);
-    this.state = {
-      value: ''
-    }
-    this.inputHandler = this.inputHandler.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  inputHandler(event) {
+  handleInputChange(event) {
+    // Read the value from the event
     const value = event.target.value;
-    this.setState({ value }); // update state
-    this.props.changeHandler(value); // update productlist
+    this.props.onFilterChange(value); // update productlist
   }
 
   render() {
+    // Get the filterText from the component's props
+    const { filterText } = this.props;
+
     return (
       <div>
         <label>
           Product filter:
+          {' '}
           <input
             name="productFilter"
-            value={this.state.value}
+            value={filterText}
             placeholder="Type something..."
-            onChange={this.inputHandler}
+            onChange={this.handleInputChange}
             type="text"
             />
         </label>
