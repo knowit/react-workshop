@@ -6,7 +6,7 @@ const Product = ({id, name, price, img, deleteHandler}) => (
     <td>{name}</td>
     <td>{price}</td>
     <td><img src={img}/></td>
-    <td><Button onClick={() => deleteHandler(id)}>Slett</Button></td>
+    <td><Button onClick={() => deleteHandler(id)}>Delete</Button></td>
   </tr>
 );
 

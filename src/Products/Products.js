@@ -3,25 +3,27 @@ import ProductList from './ProductList'
 import ProductFilter from './ProductFilter'
 import './Products.css'
 import Button from '../Button/Button'
+import beerList from '../../data/data.json'
+import ProductForm from './ProductForm'
 
 export default class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: [
-        { id: 1, name: 'Nøgne Ø Imperial Stout', price: 80, img: 'https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg' },
-        { id: 2, name: 'Kronenbourg 1664 Blanc', price: 40, img: 'https://bilder.vinmonopolet.no/cache/300x300-0/1793702-1.jpg' },
-        { id: 3, name: 'Nøgne Ø Dark Horizon 5', price: 250, img: 'https://bilder.vinmonopolet.no/cache/300x300-0/6975202-1.jpg' },
-        { id: 4, name: 'Brugse Zot Blond', price: 49, img: 'https://bilder.vinmonopolet.no/cache/300x300-0/5233102-1.jpg' },
-        { id: 5, name: 'Brugse Zot Dubbel', price: 53, img: 'https://bilder.vinmonopolet.no/cache/300x300-0/6977002-1.jpg' },
-        { id: 6, name: 'By The Horns Samba King Rye Ale', price: 55, img: 'https://bilder.vinmonopolet.no/cache/300x300-0/6989002-1.jpg' },
-      ],
+      products: [],
       filter: ''
     }
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.handleDeleteProduct = this.handleDeleteProduct.bind(this);
-  }
+    this.handleAddProduct = this.handleAddProduct.bind(this);
 
+  }
+  /**
+  * When this component will mount, add the beer list to products
+  */
+  componentWillMount() {
+    this.setState({ products: beerList })
+  }
   /**
   * Whenever the filter changes, call this to update the filter text in the component's state
   */
@@ -30,8 +32,14 @@ export default class Products extends Component {
   }
 
   handleDeleteProduct(productId) {
-    this.setState(prevState => ({ 
+    this.setState(prevState => ({
       products: prevState.products.filter(product => (product.id !== productId))
+    }));
+  }
+  handleAddProduct(product) {
+    const lastId = this.state.products[this.state.products.length-1].id
+    this.setState(prevState => ({
+      products: prevState.products.concat([{id: lastId, ...product}])
     }));
   }
 
@@ -44,7 +52,7 @@ export default class Products extends Component {
         />
         <h2>Products</h2>
         <ProductList products={this.state.products} filter={this.state.filter} deleteHandler={this.handleDeleteProduct} />
-        <Button >Hei</Button>
+        <ProductForm onSubmit={this.handleAddProduct}/>
       </div>
     )
   }
