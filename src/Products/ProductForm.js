@@ -34,7 +34,7 @@ class ProductForm extends Component {
     return (
       <form onSubmit={this.submitProduct}>
         <Input name="name" type="text" onChange={this.onFieldChange} label="Name: "/>
-        <Input name="price" type="text" onChange={this.onFieldChange} label="Price: "/>
+        <Input name="price" type="number" onChange={this.onFieldChange} label="Price: "/>
         <Input name="img" type="text" onChange={this.onFieldChange} label="Image: "/>
         <Input name="submit" type="submit"/>
       </form>
