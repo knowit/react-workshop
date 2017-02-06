@@ -13,10 +13,10 @@ class ProductFilter extends Component {
     this.inputHandler = this.inputHandler.bind(this);
   }
 
-  inputHandler(e) {
-    const val = e.target.value;
-    this.setState(prevState => ({ value: `${val}` })) // update state
-    this.props.changeHandler(val); // update productlist
+  inputHandler(event) {
+    const value = event.target.value;
+    this.setState({ value }); // update state
+    this.props.changeHandler(value); // update productlist
   }
 
   render() {

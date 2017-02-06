@@ -22,9 +22,7 @@ export default class Products extends Component {
   }
 
   filterHandler(value){
-    this.setState(prevState => ({
-      filter: value
-    }));
+    this.setState({ filter: value });
   }
 
   render() {

@@ -5,12 +5,14 @@ const Product = ({id, name, price, img}) => (
     <td>{name}</td>
     <td>{price}</td>
     <td><img src={img}/></td>
-  </tr>);
+  </tr>
+);
 
 const ProductList = ({products, filter}) => {
   const productList = products
-  .filter(product => product.name.toLowerCase().indexOf(filter.toLowerCase()) !== -1) // Lowercase and match, hit will return >=0
-  .map((product, index) => <Product key={index} {...product} />) // Create product row
+    .filter(product => product.name.toLowerCase().includes(filter.toLowerCase())) // Lowercase and match, hit will return >=0
+    .map((product, index) => <Product key={index} {...product} />); // Create product row
+
   return (
     <table>
       <thead>
@@ -24,7 +26,7 @@ const ProductList = ({products, filter}) => {
         {productList}
       </tbody>
     </table>
-  )
+  );
 }
 
 export default ProductList;
