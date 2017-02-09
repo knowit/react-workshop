@@ -1,0 +1,17 @@
+button {
+  display: inline-block;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  padding: 1.1em;
+  border: none;
+  font-size: 1em;
+  color: white;
+  background-color: #009682;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid #009682;
+}
+button:hover {
+  background-color: white;
+  color: #009682;
+}
