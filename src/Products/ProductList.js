@@ -1,27 +1,20 @@
 import React from 'react';
 import Button from '../Button/Button';
 
-const Product = ({id, name, price, img, deleteHandler}) => (
+
+const Product = () => (
   <tr>
-    <td>{name}</td>
-    <td>{price}</td>
-    <td><img src={img}/></td>
-    <td><Button onClick={() => deleteHandler(id)}>Delete</Button></td>
+    <td>A beer row</td>
   </tr>
 );
 
-const ProductList = ({products, filter, deleteHandler}) => {
-  const productList = products
-    .filter(product => product.name.toLowerCase().includes(filter.toLowerCase())) // Lowercase and match, hit will return >=0
-    .map((product, index) => <Product key={index} {...product} deleteHandler={deleteHandler}  />); // Create product row
+const ProductList = ({products}) => {
+  const productList = products.filter(filter => true).map((product) => <Product />); // Create product row
   return (
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Price</th>
-          <th></th>
-          <th></th>
+          <th>What is this?</th>
         </tr>
       </thead>
       <tbody>

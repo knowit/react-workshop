@@ -11,31 +11,24 @@ class ProductForm extends Component {
   constructor(props) {
     super(props);
     this.state = defaultState;
-    this.onFieldChange = this.onFieldChange.bind(this);
-    this.submitProduct = this.submitProduct.bind(this);
   }
 
   onFieldChange (event) {
     const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = target.value;
     const name = target.name;
-    this.setState(prevState => ({
-      [name]: value
-    }));
+    // Set the state based on the input field changed
   }
   submitProduct (evt) {
-    evt.preventDefault();
-    evt.target.reset();
-    this.setState(defaultState)
-    this.props.onSubmit(this.state);
+    // Make sure that the form is reset and the state is sat to default. 
   }
   render() {
 
     return (
-      <form onSubmit={this.submitProduct}>
-        <Input name="name" type="text" onChange={this.onFieldChange} label="Name: "/>
-        <Input name="price" type="number" onChange={this.onFieldChange} label="Price: "/>
-        <Input name="img" type="text" onChange={this.onFieldChange} label="Image: "/>
+      <form>
+        <Input name="name" type="text"  label="Name: "/>
+        <Input name="price" type="number" label="Price: "/>
+        <Input name="img" type="text" label="Image: "/>
         <Input name="submit" type="submit"/>
       </form>
     )

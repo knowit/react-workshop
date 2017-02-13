@@ -10,49 +10,33 @@ export default class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: [],
-      filter: ''
+      products: [
+        {"id":1,"name":"Nøgne Ø Imperial Stout","price":80,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"},
+      ],
     }
-    this.handleFilterChange = this.handleFilterChange.bind(this);
-    this.handleDeleteProduct = this.handleDeleteProduct.bind(this);
-    this.handleAddProduct = this.handleAddProduct.bind(this);
-
-  }
-  /**
-  * When this component will mount, add the beer list to products
-  */
-  componentWillMount() {
-    this.setState({ products: beerList })
+    //Bindings goes here.
   }
   /**
   * Whenever the filter changes, call this to update the filter text in the component's state
   */
   handleFilterChange(filterText){
-    this.setState({ filter: filterText });
+    //Handle filter change here. Remember that the filter should be in the state.
   }
 
   handleDeleteProduct(productId) {
-    this.setState(prevState => ({
-      products: prevState.products.filter(product => (product.id !== productId))
-    }));
+    //Handle delete products from state here
   }
   handleAddProduct(product) {
-    const lastId = this.state.products[this.state.products.length-1].id
-    this.setState(prevState => ({
-      products: prevState.products.concat([{id: lastId, ...product}])
-    }));
+    //Handle add products here. As an id you can use the length of this.state.products + 1
   }
 
   render() {
     return (
       <div className="Products">
-        <ProductFilter
-          onFilterChange={this.handleFilterChange}
-          filterText={this.state.filter}
-        />
+        <ProductFilter />
         <h2>Products</h2>
-        <ProductList products={this.state.products} filter={this.state.filter} deleteHandler={this.handleDeleteProduct} />
-        <ProductForm onSubmit={this.handleAddProduct}/>
+        <ProductList products={this.state.products}/>
+        <ProductForm />
       </div>
     )
   }
