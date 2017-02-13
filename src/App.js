@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Header';
 import logo from './logo.svg';
 import './App.css';
+import Products from './Products/Products'
 
 class App extends Component {
   render() {
@@ -9,11 +9,12 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Header title="Welcome to Knowit's React workshop" />
+          <h2>Welcome to React Workshop by Knowit</h2>
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Products />
       </div>
     );
   }
