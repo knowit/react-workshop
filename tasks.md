@@ -84,7 +84,7 @@ Docs: https://facebook.github.io/react/docs/state-and-lifecycle.html
 
 Try changing the URL. Does your application still work? Add error handling to the fetch as well!
 
-# Task 8
+## Task 8
 Join us @ `Den Gode Nabo`. PS: You can't start here.
 
 ## Are you finished?
