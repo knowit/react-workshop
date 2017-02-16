@@ -3,30 +3,29 @@ import ProductList from './ProductList'
 import ProductFilter from './ProductFilter'
 import './Products.css'
 import Button from '../Button/Button'
-import beerList from '../../data/data.json'
+import beerList from '../../public/data.json'
 import ProductForm from './ProductForm'
 
 export default class Products extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: [
-        {"id":1,"name":"Nøgne Ø Imperial Stout","price":80,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"},
-      ],
-    }
-    //Bindings goes here.
+
+  state = {
+    products: [
+      {"id":1,"name":"Nøgne Ø Imperial Stout","price":80,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"},
+    ],
+    filter: '',
   }
+
   /**
   * Whenever the filter changes, call this to update the filter text in the component's state
   */
-  handleFilterChange(filterText){
+  handleFilterChange = (filterText) => {
     //Handle filter change here. Remember that the filter should be in the state.
   }
 
-  handleDeleteProduct(productId) {
+  handleDeleteProduct = (productId) => {
     //Handle delete products from state here
   }
-  handleAddProduct(product) {
+  handleAddProduct = (product) => {
     //Handle add products here. As an id you can use the length of this.state.products + 1
   }
 

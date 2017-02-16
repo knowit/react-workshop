@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 ## Setup
 ### Editor
-For this workshop we recommend Atom but you can use whetever you want. 
+For this workshop we recommend Atom but you can use whetever you want.
 - [Atom](https://atom.io/)
 - [Visual studio code](https://code.visualstudio.com/)
 
@@ -21,7 +21,7 @@ $ npm -v
 v3.X.X
 ```
 
-## Install 
+## Install
 ```sh
 $ git clone https://github.com/knowit/reactworkshop
 $ cd reactworkshop
@@ -33,12 +33,5 @@ $ npm install
 $ npm start
 ```
 
-## Test
-```sh
-$ npm run test
-```
-
-## Build for production
-```sh
-$ npm run build
-```
+## Tasks
+Open `tasks.md` and begin your `<React />` journey!
