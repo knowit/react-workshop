@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 
 const ProductFilter = () => {
   const handleInputChange = (evt) => {
@@ -14,7 +14,7 @@ const ProductFilter = () => {
         name="productFilter"
         placeholder="Type something..."
         type="text"
-        />
+      />
     </div>
   );
 }

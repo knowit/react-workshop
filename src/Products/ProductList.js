@@ -12,7 +12,7 @@ const Product = () => (
 const ProductList = ({products}) => {
   const productList = products
     .filter(filter => true)
-    .map((product) => <Product />);
+    .map((product) => <Product key={product.id} />);
 
   return (
     <table>

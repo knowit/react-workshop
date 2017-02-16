@@ -11,9 +11,9 @@ class ProductForm extends Component {
   state = defaultState;
 
   onFieldChange = (event) => {
-    const target = event.target;
+    /*const target = event.target;
     const value = target.value;
-    const name = target.name;
+    const name = target.name;*/
     // Set the state based on the input field changed
   }
   submitProduct = (evt) => {

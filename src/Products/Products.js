@@ -3,7 +3,6 @@ import ProductList from './ProductList'
 import ProductFilter from './ProductFilter'
 import './Products.css'
 import Button from '../Button/Button'
-import beerList from '../../public/data.json'
 import ProductForm from './ProductForm'
 
 export default class Products extends Component {

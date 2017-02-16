@@ -9,7 +9,7 @@ const Header = () =>
 
 // This is an example of prop validation, do not worry about this.
 Header.propTypes = {
-  title: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string,
 };
 
 export default Header;
