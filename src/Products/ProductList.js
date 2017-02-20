@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Button/Button';
+// import Button from '../Button/Button';
 
 // Create product row
 const Product = () => (
@@ -12,7 +12,7 @@ const Product = () => (
 const ProductList = ({products}) => {
   const productList = products
     .filter(filter => true)
-    .map((product) => <Product key={product.id} />);
+    .map((product, index) => <Product key={index} />);
 
   return (
     <table>

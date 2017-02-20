@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import ProductList from './ProductList'
 import ProductFilter from './ProductFilter'
 import './Products.css'
-import Button from '../Button/Button'
+// import Button from '../Button/Button'
 import ProductForm from './ProductForm'
 
 export default class Products extends Component {
 
   state = {
     products: [
-      {"id":1,"name":"Nøgne Ø Imperial Stout","price":80,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"},
+      {"name":"Nøgne Ø Imperial Stout","price":80,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"},
     ],
     filter: '',
   }
