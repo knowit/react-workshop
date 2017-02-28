@@ -42,7 +42,9 @@ someDeleteFunction = (indexToDelete) => {
 
 Hint: We have already created a button component that you can use.
 
-React Docs: https://facebook.github.io/react/docs/handling-events.html
+React Docs for events: https://facebook.github.io/react/docs/handling-events.html
+
+React Docs for state: https://facebook.github.io/react/docs/state-and-lifecycle.html
 
 ## Task 4
 However, you want to add beers again. Create a form where you add name, price and image. This is done here:
