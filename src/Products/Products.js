@@ -25,7 +25,7 @@ export default class Products extends Component {
     //Handle delete products from state here
   }
   handleAddProduct = (product) => {
-    //Handle add products here. As an id you can use the length of this.state.products + 1
+    //Handle add products here.
   }
 
   render() {
