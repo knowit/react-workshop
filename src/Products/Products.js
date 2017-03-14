@@ -6,13 +6,16 @@ import './Products.css'
 import ProductForm from './ProductForm'
 
 export default class Products extends Component {
-
-  state = {
-    products: [
-      {"name":"Nøgne Ø Imperial Stout","price":80,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"},
-    ],
-    filter: '',
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [
+        {"name":"Nøgne Ø Imperial Stout","price":80,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"},
+      ],
+      filter: '',
+    }
   }
+  
 
   /**
   * Whenever the filter changes, call this to update the filter text in the component's state

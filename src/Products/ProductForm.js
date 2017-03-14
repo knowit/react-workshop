@@ -8,7 +8,11 @@ const defaultState = {
 }
 
 class ProductForm extends Component {
-  state = defaultState;
+  constructor(props) {
+    super(props);
+    this.state = defaultState;
+  }
+
 
   onFieldChange = (event) => {
     /*const target = event.target;
