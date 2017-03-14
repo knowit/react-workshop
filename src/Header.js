@@ -4,7 +4,7 @@ Task 1: Change the title of the header to 'My favourite beers' or something else
 Tip: Make use of props
 */
 
-const Header = ({title}) =>
+const Header = (props) =>
   <p>Hello, add a h2 title here</p>
 
 // This is an example of prop validation, do not worry about this.
