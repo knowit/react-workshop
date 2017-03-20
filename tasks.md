@@ -31,11 +31,11 @@ You get tired of some of the beers and you want to remove them. Make a delete bu
 To remove an element from the list, a [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) function is needed:
 
 ```javascript
-someDeleteFunction = (indexToDelete) => {
-  const newArray = this.state.array
+handleDeleteProduct = (indexToDelete) => {
+  const newArray = this.state.products
   .filter((element, index) => /*Some check that returns true needs to be implemented here...*/);
 
-  this.setState({array: newArray});
+  this.setState({products: newArray});
 }
 ```
 

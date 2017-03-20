@@ -15,7 +15,7 @@ export default class Products extends Component {
       filter: '',
     }
   }
-  
+
 
   /**
   * Whenever the filter changes, call this to update the filter text in the component's state
@@ -24,9 +24,10 @@ export default class Products extends Component {
     //Handle filter change here. Remember that the filter should be in the state.
   }
 
-  handleDeleteProduct = (productId) => {
+  handleDeleteProduct = (indexToDelete) => {
     //Handle delete products from state here
   }
+
   handleAddProduct = (product) => {
     //Handle add products here.
   }
