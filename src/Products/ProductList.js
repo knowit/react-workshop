@@ -2,7 +2,7 @@ import React from 'react';
 // import Button from '../Button/Button';
 
 // Create product row
-const Product = () => (
+const Product = (props) => (
   <tr>
     <td>title</td>
     <td>price</td>

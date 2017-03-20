@@ -7,7 +7,7 @@ Tip: Make use of props
 const Header = (props) =>
   <p>Hello, add a h2 title here</p>
 
-// This is an example of prop validation, do not worry about this.
+// This is an example of prop validation (task 6), do not worry about this.
 Header.propTypes = {
   title: React.PropTypes.string,
 };
