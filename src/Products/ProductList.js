@@ -4,7 +4,10 @@ import React from 'react';
 // Create product row
 const Product = () => (
   <tr>
-    <td>A beer row</td>
+    <td>title</td>
+    <td>price</td>
+    <td>img tag</td>
+    <td>Delete button (task 3)</td>
   </tr>
 );
 
@@ -18,7 +21,10 @@ const ProductList = (props) => {
     <table>
       <thead>
         <tr>
-          <th>What is this?</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Image</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
