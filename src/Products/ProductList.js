@@ -9,8 +9,8 @@ const Product = () => (
 );
 
 //Remember to make use of the products from props
-const ProductList = ({products}) => {
-  const productList = products
+const ProductList = (props) => {
+  const productList = props.products
     .filter(filter => true)
     .map((product, index) => <Product key={index} />);
 
