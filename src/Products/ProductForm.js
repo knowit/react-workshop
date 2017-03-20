@@ -13,22 +13,27 @@ class ProductForm extends Component {
     this.state = defaultState;
   }
 
-
   onFieldChange = (event) => {
-    /*const target = event.target;
-    const value = target.value;
-    const name = target.name;*/
-    // Set the state based on the input field changed
+    const value = event.target.value;
+    const name = event.target.name;
+    // Remove this when you get it working
+    console.log(`field ${name} changed to value: ${value}`)
+    // Update the state based on the input field changed
   }
+
   submitProduct = (evt) => {
-    // Make sure that the form is reset and the state is sat to default.
+    // We don't want to reload on submit
+    evt.preventDefault();
+    // Make sure that the form is reset by setting the state back to the default
   }
+
   render() {
+    const { name, price, img } = this.state;
     return (
       <form>
-        <Input name="name" type="text" label="Name: "/>
-        <Input name="price" type="number" label="Price: "/>
-        <Input name="img" type="text" label="Image: "/>
+        <Input name="name" type="text" label="Name: " value={name} />
+        <Input name="price" type="number" label="Price: " value={price} />
+        <Input name="img" type="text" label="Image: " value={img} />
         <Input name="submit" type="submit"/>
       </form>
     )
