@@ -132,7 +132,7 @@ Docs: https://facebook.github.io/react/docs/state-and-lifecycle.html
 Try changing the URL. Does your application still work? Add error handling to the fetch as well!
 
 ## Task 8
-Mingle with us!
+Take the bus to the airport
 
 ## Are you finished?
-Ask us anything React or about Knowit!
+Ask us anything React.
