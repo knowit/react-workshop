@@ -132,7 +132,7 @@ Docs: https://facebook.github.io/react/docs/state-and-lifecycle.html
 Try changing the URL. Does your application still work? Add error handling to the fetch as well!
 
 ## Task 8
-Take the bus to the airport
+Drink some beer or code React.
 
 ## Are you finished?
 Ask us anything React.
