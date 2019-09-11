@@ -1,21 +1,46 @@
 import React from 'react';
-// import Button from '../Button/Button';
+import PropTypes from 'prop-types';
+import Button from '../Button/Button';
 
 // Create product row
-const Product = (props) => (
-  <tr>
-    <td>title</td>
-    <td>price</td>
-    <td>img tag</td>
-    <td>Delete button (task 3)</td>
-  </tr>
-);
+const Product = ({ index, product, deleteProduct }) => {
+  let { name, price, img } = product;
+  return (
+    <tr>
+      <td>{name}</td>
+      <td>{price}</td>
+      <td>
+        <img src={img} alt="pic" />
+      </td>
+      <td>
+        <Button onClick={() => deleteProduct(index)}>Delete</Button>
+      </td>
+    </tr>
+  );
+};
+
+Product.propTypes = {
+  product: PropTypes.object.isRequired,
+  deleteProduct: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+};
 
 //Remember to make use of the products from props
-const ProductList = (props) => {
-  const productList = props.products
-    .filter(filter => true)
-    .map((product, index) => <Product key={index} />);
+const ProductList = props => {
+  let { deleteProduct, products, filterText } = props;
+
+  const productList = products
+    .filter(product =>
+      product.name.toLowerCase().includes(filterText.toLowerCase()),
+    )
+    .map((product, index) => (
+      <Product
+        deleteProduct={deleteProduct}
+        product={product}
+        key={index}
+        index={index}
+      />
+    ));
 
   return (
     <table>
@@ -27,11 +52,15 @@ const ProductList = (props) => {
           <th>Delete</th>
         </tr>
       </thead>
-      <tbody>
-        {productList}
-      </tbody>
+      <tbody>{productList}</tbody>
     </table>
   );
-}
+};
+
+ProductList.propTypes = {
+  products: PropTypes.array.isRequired,
+  deleteProduct: PropTypes.func.isRequired,
+  filterText: PropTypes.string.isRequired,
+};
 
 export default ProductList;

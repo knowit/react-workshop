@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Input from '../Input/Input';
 
 const defaultState = {
@@ -8,31 +9,56 @@ const defaultState = {
 };
 
 function ProductForm(props) {
+  let { addProduct } = props;
   let [product, setProduct] = useState(defaultState);
 
   let onFieldChange = event => {
     const value = event.target.value;
     const name = event.target.name;
-    // Remove this when you get it working
-    console.log(`field ${name} changed to value: ${value}`);
-    // Update the state based on the input field changed
+    setProduct({ ...product, [name]: value });
   };
 
   let submitProduct = evt => {
     // We don't want to reload on submit
     evt.preventDefault();
+
+    addProduct(product);
+
     // Make sure that the form is reset by setting the state back to the default
+    setProduct(defaultState);
   };
 
   const { name, price, img } = product;
   return (
     <form>
-      <Input name="name" type="text" label="Name: " value={name} />
-      <Input name="price" type="number" label="Price: " value={price} />
-      <Input name="img" type="text" label="Image: " value={img} />
-      <Input name="submit" type="submit" />
+      <Input
+        name="name"
+        type="text"
+        onChange={onFieldChange}
+        label="Name: "
+        value={name}
+      />
+      <Input
+        name="price"
+        type="number"
+        onChange={onFieldChange}
+        label="Price: "
+        value={price}
+      />
+      <Input
+        name="img"
+        type="text"
+        onChange={onFieldChange}
+        label="Image: "
+        value={img}
+      />
+      <Input name="submit" type="submit" onClick={submitProduct} />
     </form>
   );
 }
+
+ProductForm.propTypes = {
+  addProduct: PropTypes.func.isRequired,
+};
 
 export default ProductForm;
