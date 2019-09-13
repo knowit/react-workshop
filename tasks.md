@@ -118,6 +118,7 @@ Example:
 ```javascript
 SomeComponent.propTypes = {
   someRequiredObject: PropTypes.object.isRequired,
+  someRequiredFunction: PropTypes.func.isRequired,
   someOptionalString: PropTypes.string,
 };
 ```
@@ -132,9 +133,9 @@ Docs: https://reactjs.org/docs/typechecking-with-proptypes.html
 
 ## Task 7
 
-Take advantage of the life cycle methods in React. When a component mounts, you want to fetch some data (in this case, beers) from an API. Use the [fetch](https://github.com/github/fetch#json) function to retrieve the initial list of beers and use this to populate the component's state.
+Take advantage of the useEffect hook in React. When a component mounts, you want to fetch some data (in this case, beers) from an API. Use the [fetch](https://github.com/github/fetch#json) function to retrieve the initial list of beers and use this to populate the component's state.
 
-Tip: In `componentWillMount()`
+Tip: To only run `useEffect` once (on mount), you can pass an empty array `[]` as a second argument to `useEffect`.
 
 ```javascript
   fetch('/data.json')
@@ -142,13 +143,9 @@ Tip: In `componentWillMount()`
     .then(beers => /* What here? */);
 ```
 
-Docs: https://facebook.github.io/react/docs/state-and-lifecycle.html
+Docs: https://reactjs.org/docs/hooks-effect.html
 
 Try changing the URL. Does your application still work? Add error handling to the fetch as well!
-
-## Task 8
-
-Drink some beer or code React.
 
 ## Are you finished?
 
