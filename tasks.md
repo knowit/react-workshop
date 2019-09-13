@@ -45,9 +45,12 @@ handleDeleteProduct = (indexToDelete) => {
 
 Hint: We have already created a button component that you can use.
 
-React Docs for events: https://facebook.github.io/react/docs/handling-events.html
+React Docs for events: https://reactjs.org/docs/handling-events.html
 
-React Docs for state: https://facebook.github.io/react/docs/state-and-lifecycle.html
+React Docs for useState hook: https://reactjs.org/docs/hooks-overview.html#state-hook
+
+React Docs for useState hook if you are familiar with React classes: https://reactjs.org/docs/hooks-state.html
+
 
 ## Task 4
 
@@ -84,7 +87,7 @@ someFunction = newElement => {
 
 Remember to pass the `handleAddProduct` function in `Products.js` as prop to the `<ProductForm />` component.
 
-Read more about form handling in React here: https://facebook.github.io/react/docs/forms.html
+Read more about form handling in React here: https://reactjs.org/docs/forms.html
 
 ## Task 5
 
@@ -125,7 +128,7 @@ Hint: Remember to import PropTypes:
 import PropTypes from 'prop-types';
 ```
 
-Docs: https://facebook.github.io/react/docs/typechecking-with-proptypes.html
+Docs: https://reactjs.org/docs/typechecking-with-proptypes.html
 
 ## Task 7
 
