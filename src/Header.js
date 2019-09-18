@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /*
-Task 1: Change the title of the header to 'My favourite beers' or something else.
+Task 1: Change the title of the header to 'My favourite beverages' or something else.
 Tip: Make use of props
 */
 
