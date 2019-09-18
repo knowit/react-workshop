@@ -14,7 +14,7 @@ const Product = (props) => (
 //Remember to make use of the products from props
 const ProductList = (props) => {
   const productList = props.products
-    .filter(filter => true)
+    .filter(product => true)
     .map((product, index) => <Product key={index} />);
 
   return (
