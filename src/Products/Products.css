@@ -4,24 +4,11 @@
 	border-collapse: collapse;
 	margin-bottom: 1em;
 }
+
 table tr {
 	border-bottom: 1px solid #009682;
 }
+
 img {
 	width: 30%;
-}
-input {
-	padding: .4em 1em;
-  box-shadow: inset 1px 1px rgba(0,0,0,.03);
-  border: 1px solid #e6e6e6;
-  background: #fff;
-  min-height: 1.5em;
-  font-size: 1em;
-  color: #444;
-}
-
-input:hover, input:focus {
-  border: 1px solid #009682;
-  color: #444;
-	outline: none;
 }
