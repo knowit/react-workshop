@@ -1,8 +1,122 @@
 [
-  {"name":"Nøgne Ø Imperial Stout","price":80,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"},
-  {"name":"Kronenbourg 1664 Blanc","price":40,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/1793702-1.jpg"},
-  {"name":"Nøgne Ø Dark Horizon 5","price":250,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/6975202-1.jpg"},
-  {"name":"Brugse Zot Blond","price":49,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/5233102-1.jpg"},
-  {"name":"Brugse Zot Dubbel","price":53,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/6977002-1.jpg"},
-  {"name":"By The Horns Samba King Rye Ale","price":55,"img":"https://bilder.vinmonopolet.no/cache/300x300-0/6989002-1.jpg"}
+  {
+    "name": "Appelsinjuice",
+    "price": 22,
+    "category": "Juice",
+    "img": "https://kolonial.no/media/uploads/public/214/246/1142646-f2737-product_large.jpg"
+  },
+  {
+    "name": "Catena Alta Cabernet Sauvignon 2018",
+    "price": 335,
+    "category": "Wine",
+    "img": "https://bilder.vinmonopolet.no/cache/515x515-0/4610601-1.jpg"
+  },
+  {
+    "name": "Eventyrbrus",
+    "price": 29,
+    "category": "Soft drink",
+    "img": "https://kolonial.no/media/uploads/public/176/330/1142730-1b4ac-product_large.jpg"
+  },
+  {
+    "name": "Nøgne Ø Imperial Stout",
+    "price": 80,
+    "category": "Beer",
+    "img": "https://bilder.vinmonopolet.no/cache/300x300-0/1053802-1.jpg"
+  },
+  {
+    "name": "Erdinger Alkoholfrei",
+    "price": 29,
+    "category": "Beer",
+    "img": "https://bilder.vinmonopolet.no/cache/515x515-0/6395702-1.jpg"
+  },
+  {
+    "name": "Solo",
+    "price": 35,
+    "category": "Soft drink",
+    "img": "https://kolonial.no/media/uploads/public/132/156/1114956-cd1ca-product_large.jpg"
+  },
+  {
+    "name": "Kronenbourg 1664 Blanc",
+    "price": 40,
+    "category": "Beer",
+    "img": "https://bilder.vinmonopolet.no/cache/300x300-0/1793702-1.jpg"
+  },
+  {
+    "name": "Masciarelli Rosato 2017",
+    "price": 179,
+    "category": "Wine",
+    "img": "https://bilder.vinmonopolet.no/cache/515x515-0/4733601-1.jpg"
+  },
+  {
+    "name": "Nøgne Ø Dark Horizon 5",
+    "price": 250,
+    "category": "Beer",
+    "img": "https://bilder.vinmonopolet.no/cache/300x300-0/6975202-1.jpg"
+  },
+  {
+    "name": "Eplejuice",
+    "price": 27,
+    "category": "Juice",
+    "img": "https://kolonial.no/media/uploads/public/1/87/1138887-d812e-product_large.jpg"
+  },
+  {
+    "name": "Pepsi",
+    "price": 41,
+    "category": "Soft drink",
+    "img": "https://kolonial.no/media/uploads/public/114/252/1148652-93107-product_large.jpg"
+  },
+  {
+    "name": "Brugse Zot Blond",
+    "price": 49,
+    "category": "Beer",
+    "img": "https://bilder.vinmonopolet.no/cache/300x300-0/5233102-1.jpg"
+  },
+  {
+    "name": "Vajra Barolo Bricco delle Viole 2014",
+    "price": 556,
+    "category": "Wine",
+    "img": "https://bilder.vinmonopolet.no/cache/515x515-0/4517601-1.jpg"
+  },
+  {
+    "name": "Tøyen-Cola",
+    "price": 27,
+    "category": "Soft drink",
+    "img": "https://kolonial.no/media/uploads/public/178/141/1150941-7f4b9-product_large.jpg"
+  },
+  {
+    "name": "Brugse Zot Dubbel",
+    "price": 53,
+    "category": "Beer",
+    "img": "https://bilder.vinmonopolet.no/cache/300x300-0/6977002-1.jpg"
+  },
+  {
+    "name": "Tranebærjuice",
+    "price": 54,
+    "category": "Juice",
+    "img": "https://kolonial.no/media/uploads/public/258/136/1149336-784ae-product_large.jpg"
+  },
+  {
+    "name": "Cant. del Castello Soave Classico 2017",
+    "price": 139,
+    "category": "Wine",
+    "img": "https://bilder.vinmonopolet.no/cache/515x515-0/4558701-1.jpg"
+  },
+  {
+    "name": "By The Horns Samba King Rye Ale",
+    "price": 55,
+    "category": "Beer",
+    "img": "https://bilder.vinmonopolet.no/cache/300x300-0/6989002-1.jpg"
+  },
+  {
+    "name": "Eplemost",
+    "price": 54,
+    "category": "Juice",
+    "img": "https://kolonial.no/media/uploads/public/173/178/1114978-6486d-product_large.jpg"
+  },
+  {
+    "name": "Tonic",
+    "price": 44,
+    "category": "Soft drink",
+    "img": "https://kolonial.no/media/uploads/public/222/270/1148670-38974-product_large.jpg"
+  }
 ]

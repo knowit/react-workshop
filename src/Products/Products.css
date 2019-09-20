@@ -10,5 +10,6 @@ table tr {
 }
 
 img {
-	width: 30%;
+	max-width: 48px;
+  margin: 20px;
 }
