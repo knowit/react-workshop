@@ -18,15 +18,15 @@ export default function Products() {
    * Whenever the filter changes, call this to update the filter text in the component's state
    */
   let handleFilterChange = filterText => {
-    //Handle filter change here. Remember that the filter should be in the state.
+    // Handle filter change here. Remember that the filter should be in the state.
   };
 
   let handleDeleteProduct = indexToDelete => {
-    //Handle delete products from state here
+    // Handle delete products from state here
   };
 
   let handleAddProduct = product => {
-    //Handle add products here.
+    // Handle add products here.
   };
 
   return (
