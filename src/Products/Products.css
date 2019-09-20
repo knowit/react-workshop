@@ -8,7 +8,8 @@ table tr {
 	border-bottom: 1px solid #009682;
 }
 img {
-	width: 30%;
+	max-width: 48px;
+  margin: 20px;
 }
 input {
 	padding: .4em 1em;
