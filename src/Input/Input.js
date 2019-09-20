@@ -7,7 +7,7 @@ const Input = (props) => {
 
   const { label } = props
   return (
-    <div>
+    <div className="form-control">
       {label && <label>{label}</label>}
       <input {...props} />
     </div>

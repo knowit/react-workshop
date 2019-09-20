@@ -30,7 +30,7 @@ function ProductForm(props) {
       <Input name="name" type="text" label="Name: " value={name} />
       <Input name="price" type="number" label="Price: " value={price} />
       <Input name="img" type="text" label="Image: " value={img} />
-      <Input name="submit" type="submit" />
+      <Input className="btn" name="submit" type="submit" />
     </form>
   );
 }
