@@ -1,17 +1,18 @@
-button {
+.btn {
   display: inline-block;
   -webkit-transition: background-color .3s ease;
   transition: background-color .3s ease;
-  padding: 1.1em;
+  padding: 0.6em;
   border: none;
   font-size: 1em;
   color: white;
   background-color: #009682;
   cursor: pointer;
   text-decoration: none;
-  border: 2px solid #009682;
+  border-radius: 0.25rem;
+  font-weight: 600;
 }
-button:hover {
-  background-color: white;
-  color: #009682;
+
+.btn:hover {
+  background-color: #007E6D;
 }

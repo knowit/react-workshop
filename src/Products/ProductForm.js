@@ -52,7 +52,7 @@ function ProductForm(props) {
         label="Image: "
         value={img}
       />
-      <Input name="submit" type="submit" onClick={submitProduct} />
+      <Input className="btn" name="submit" type="submit" onClick={submitProduct}/>
     </form>
   );
 }

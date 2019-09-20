@@ -100,7 +100,9 @@ When the number of beverages increases, we want to filter the list to find the c
 `ProductFilter` is supposed to update the filter state in the Product component. This will cause the Product component and the ProductList to re-render. Add a filter function to the `productList` as shown here:
 
 ```javascript
-const productList = products.filter(filter => true).map(product => <Product />);
+const productList = products
+  .filter(product => /* implement your filtering logic here */)
+  .map(product => <Product />);
 ```
 
 However, this filter function will always return true and hence all the beverages, which you'll have to fix.
@@ -108,6 +110,8 @@ However, this filter function will always return true and hence all the beverage
 Hint: String has an includes function that you can utilize in the filter method: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 
 Filter method documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+Hint: You currently do not have a state for your search filter.
 
 ## Task 6
 
