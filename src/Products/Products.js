@@ -10,9 +10,12 @@ export default function Products() {
   let [filterText, setFilterText] = useState('');
 
   useEffect(() => {
-    fetch('/data.json')
+      fetch('https://react-workshop-api.now.sh/graphql', {
+        method: 'POST',
+        body: JSON.stringify({ query: '{ beverages { name, price, img } }' }),
+      })
       .then(response => response.json())
-      .then(beers => setProducts(beers));
+      .then(response => setProducts(response.data.beverages));
   }, []);
 
   /**
