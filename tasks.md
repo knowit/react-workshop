@@ -153,21 +153,31 @@ Try changing the URL. Does your application still work? Add error handling to th
 
 ## Task 8
 
+Woho! Finally finished? Not so fast.
+
+There is a bug in our code. Type something in the filter and try to delete a beverage. Was the correct beverage deleted?
+
+In general it's a bad idea to use indices in React. Rewrite the delete functionality to use the id field provided by `data.json`.
+
+Hint: Remember to provide id when adding new beverages. You can use `new Date().getTime()` to generate an unique id.
+
+## Task 9
+
 Choose whatever subtask you want to try out.
 
-### 8.1 TypeScript
+### 9.1 TypeScript
 
-Convert the code to TypeScript. Types are great, arent they?
+Convert the code to TypeScript. Types are great, aren't they?
 
 Too get started, see here: https://create-react-app.dev/docs/adding-typescript
 
-### 8.2 Async Await
+### 9.2 Async Await
 
 Convert task 7 data fetching to make use of async await with error handling.
 
 Async await documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 
-### 8.3 GraphQL 
+### 9.3 GraphQL
 
 We have made a small GraphQL endpoint for you to use. TODO.
 
