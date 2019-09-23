@@ -137,7 +137,7 @@ Docs: https://reactjs.org/docs/typechecking-with-proptypes.html
 
 ## Task 7
 
-Take advantage of the useEffect hook in React. When a component mounts, you want to fetch some data (in this case, beverages) from an API. Use the [fetch](https://github.com/github/fetch#json) function to retrieve the initial list of beverages and use this to populate the component's state.
+Take advantage of the useEffect hook in React. When a component mounts, you want to fetch some data (in this case, beverages) from a REST API. Use the [fetch](https://github.com/github/fetch#json) function to retrieve the initial list of beverages and use this to populate the component's state.
 
 Tip: To only run `useEffect` once (on mount), you can pass an empty array `[]` as a second argument to `useEffect`.
 
@@ -169,7 +169,19 @@ Async await documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 ### 8.3 GraphQL 
 
-We have made a small GraphQL endpoint for you to use. TODO.
+We have made a simple GraphQL endpoint for you to use. You can explore the schema at: https://react-workshop-api.now.sh
+
+As in Task 7 you can use the fetch function to retrieve data:
+
+```
+fetch('https://react-workshop-api.now.sh/graphql', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ query: '{ posts { title } }' }),
+})
+```
+
+Docs: https://graphql.org/learn/queries/
 
 ## Are you finished?
 
