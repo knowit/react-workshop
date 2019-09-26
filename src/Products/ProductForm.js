@@ -22,7 +22,7 @@ function ProductForm(props) {
     // We don't want to reload on submit
     evt.preventDefault();
 
-    addProduct(product);
+    addProduct({...product, id: new Date().getTime()});
 
     // Make sure that the form is reset by setting the state back to the default
     setProduct(defaultState);

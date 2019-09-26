@@ -23,9 +23,9 @@ export default function Products() {
     setFilterText(filterText);
   };
 
-  let handleDeleteProduct = indexToDelete => {
+  let handleDeleteProduct = id => {
     //Handle delete products from state here
-    setProducts(products.filter((product, index) => index !== indexToDelete));
+    setProducts(products.filter((product) => product.id !== id));
   };
 
   let handleAddProduct = product => {
