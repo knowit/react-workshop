@@ -137,7 +137,7 @@ Docs: https://reactjs.org/docs/typechecking-with-proptypes.html
 
 ## Task 7
 
-Take advantage of the useEffect hook in React. When a component mounts, you want to fetch some data (in this case, beverages) from an API. Use the [fetch](https://github.com/github/fetch#json) function to retrieve the initial list of beverages and use this to populate the component's state.
+Take advantage of the useEffect hook in React. When a component mounts, you want to fetch some data (in this case, beverages) from a REST API. Use the [fetch](https://github.com/github/fetch#json) function to retrieve the initial list of beverages and use this to populate the component's state.
 
 Tip: To only run `useEffect` once (on mount), you can pass an empty array `[]` as a second argument to `useEffect`.
 
@@ -153,23 +153,45 @@ Try changing the URL. Does your application still work? Add error handling to th
 
 ## Task 8
 
+Woho! Finally finished? Not so fast.
+
+There is a bug in our code. Type something in the filter and try to delete a beverage. Was the correct beverage deleted?
+
+In general it's a bad idea to use indices in React. Rewrite the delete functionality to use the id field provided by `data.json`.
+
+Hint: Remember to provide id when adding new beverages. You can use `new Date().getTime()` to generate an unique id.
+
+## Task 9
+
 Choose whatever subtask you want to try out.
 
-### 8.1 TypeScript
+### 9.1 TypeScript
 
-Convert the code to TypeScript. Types are great, arent they?
+Convert the code to TypeScript. Types are great, aren't they?
 
 Too get started, see here: https://create-react-app.dev/docs/adding-typescript
 
-### 8.2 Async Await
+### 9.2 Async Await
 
 Convert task 7 data fetching to make use of async await with error handling.
 
 Async await documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 
-### 8.3 GraphQL 
+### 9.3 GraphQL
 
-We have made a small GraphQL endpoint for you to use. TODO.
+We have made a simple GraphQL endpoint for you to use. You can explore the schema at: https://react-workshop-api.now.sh
+
+As in Task 7 you can use the fetch function to retrieve data:
+
+```
+fetch('https://react-workshop-api.now.sh/graphql', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ query: '{ posts { title } }' }),
+})
+```
+
+Docs: https://graphql.org/learn/queries/
 
 ## Are you finished?
 

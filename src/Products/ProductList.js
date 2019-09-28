@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 
 // Create product row
 const Product = ({ index, product, deleteProduct }) => {
-  let { name, price, img } = product;
+  let { id, name, price, img } = product;
   return (
     <tr>
       <td>{name}</td>
@@ -13,7 +13,7 @@ const Product = ({ index, product, deleteProduct }) => {
         <img src={img} alt="pic" />
       </td>
       <td>
-        <Button onClick={() => deleteProduct(index)}>Delete</Button>
+        <Button onClick={() => deleteProduct(id)}>Delete</Button>
       </td>
     </tr>
   );
@@ -22,7 +22,6 @@ const Product = ({ index, product, deleteProduct }) => {
 Product.propTypes = {
   product: PropTypes.object.isRequired,
   deleteProduct: PropTypes.func.isRequired,
-  index: PropTypes.number.isRequired,
 };
 
 //Remember to make use of the products from props
@@ -33,12 +32,11 @@ const ProductList = props => {
     .filter(product =>
       product.name.toLowerCase().includes(filterText.toLowerCase()),
     )
-    .map((product, index) => (
+    .map((product) => (
       <Product
         deleteProduct={deleteProduct}
         product={product}
-        key={index}
-        index={index}
+        key={product.id}
       />
     ));
 
