@@ -24,7 +24,7 @@ function ProductForm(props) {
     // Make sure that the form is reset by setting the state back to the default
   };
 
-  const { name, price, img } = product;
+  let { name, price, img } = product;
   return (
     <form>
       <Input name="name" type="text" label="Name: " value={name} />
