@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 
 // Create product row
-const Product = ({ index, product, deleteProduct }) => {
+function Product({ product, deleteProduct }) {
   let { id, name, price, img } = product;
   return (
     <tr>
@@ -17,7 +17,7 @@ const Product = ({ index, product, deleteProduct }) => {
       </td>
     </tr>
   );
-};
+}
 
 Product.propTypes = {
   product: PropTypes.object.isRequired,
@@ -25,14 +25,14 @@ Product.propTypes = {
 };
 
 //Remember to make use of the products from props
-const ProductList = props => {
+function ProductList(props) {
   let { deleteProduct, products, filterText } = props;
 
-  const productList = products
+  let productList = products
     .filter(product =>
       product.name.toLowerCase().includes(filterText.toLowerCase()),
     )
-    .map((product) => (
+    .map(product => (
       <Product
         deleteProduct={deleteProduct}
         product={product}
@@ -53,7 +53,7 @@ const ProductList = props => {
       <tbody>{productList}</tbody>
     </table>
   );
-};
+}
 
 ProductList.propTypes = {
   products: PropTypes.array.isRequired,

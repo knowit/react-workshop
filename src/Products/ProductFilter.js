@@ -2,8 +2,8 @@ import React from 'react';
 import Input from '../Input/Input';
 import PropTypes from 'prop-types';
 
-const ProductFilter = ({ onFilterChange }) => {
-  const handleInputChange = evt => {
+function ProductFilter({ onFilterChange }) {
+  let handleInputChange = evt => {
     // Read the value from the event (evt)
     // update productlist with onFilterChange from props
     onFilterChange(evt.target.value);
@@ -18,7 +18,7 @@ const ProductFilter = ({ onFilterChange }) => {
       type="text"
     />
   );
-};
+}
 
 ProductFilter.propTypes = {
   onFilterChange: PropTypes.func.isRequired,
