@@ -26,9 +26,8 @@ input[type="number"] {
 
 input[type="text"], input[type="number"] {
   width: 100%;
-	padding: .3em .5em;
+  padding: .3em .5em;
   height: 1.5rem;
-  line-height: 2.5rem;
   border: 1px solid #e6e6e6;
   background: #fff;
   min-height: 1.5em;
