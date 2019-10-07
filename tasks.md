@@ -45,6 +45,8 @@ handleDeleteProduct = (indexToDelete) => {
 
 Hint: We have already created a button component that you can use.
 
+Hint 2: `key` serve as a hint to React but they don’t get passed to your components.
+
 React Docs for events: https://reactjs.org/docs/handling-events.html
 
 React Docs for useState hook: https://reactjs.org/docs/hooks-overview.html#state-hook
