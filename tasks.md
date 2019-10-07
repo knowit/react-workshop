@@ -64,7 +64,7 @@ However, you want to add beverages again. Create a form where you add name, pric
 
 ### 4.1 - Is there any change here?
 
-In `ProductForm.js` you should make use of the `onFieldChange` and this method should be injected to the `onChange` listener for each input field. When `onFieldChange` is called: Set the state based on the input field that changed. This can be achieved, for instance, by using dynamic object keys, based on the input name, like this:
+In `ProductForm.js` you should make use of the `handleFieldChange` and this method should be injected to the `onChange` listener for each input field. When `handleFieldChange` is called: Set the state based on the input field that changed. This can be achieved, for instance, by using dynamic object keys, based on the input name, like this:
 
 ```javascript
 setItem({
@@ -73,7 +73,7 @@ setItem({
 });
 ```
 
-Hint: name is found based on the event sent to `onFieldChange` function (event.target.name).
+Hint: name is found based on the event sent to `handleFieldChange` function (event.target.name).
 
 ### 4.2 - Submitting all the things
 
