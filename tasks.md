@@ -27,7 +27,7 @@ As in task 1, you need to send props to `<ProductList />` and make use of it in 
 You will have to add columns for each value in the Product, e.g. product.name. This can be done in the
 `<Product/>` component in `ProductList.js`.
 
-Hint: If you look at the props `ProductList.js` is receiving, you should notice that it needs a prop named products. This can be found in `this.state.products` in `Products.js`.
+Hint: If you look at the props `ProductList.js` is receiving, you should notice that it needs a prop named products. `Products.js` has a `products` variable given by `useState`.
 
 ## Task 3
 
