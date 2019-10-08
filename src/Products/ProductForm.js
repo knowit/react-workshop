@@ -34,21 +34,21 @@ function ProductForm(props) {
       <Input
         name="name"
         type="text"
-        onChange={onFieldChange}
+        onChange={handleFieldChange}
         label="Name: "
         value={name}
       />
       <Input
         name="price"
         type="number"
-        onChange={onFieldChange}
+        onChange={handleFieldChange}
         label="Price: "
         value={price}
       />
       <Input
         name="img"
         type="text"
-        onChange={onFieldChange}
+        onChange={handleFieldChange}
         label="Image: "
         value={img}
       />
