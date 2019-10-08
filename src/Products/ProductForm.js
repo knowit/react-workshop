@@ -12,7 +12,7 @@ function ProductForm(props) {
   let { addProduct } = props;
   let [product, setProduct] = useState(defaultState);
 
-  let onFieldChange = event => {
+  let handleFieldChange = event => {
     const value = event.target.value;
     const name = event.target.name;
     setProduct({ ...product, [name]: value });
