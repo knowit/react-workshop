@@ -10,7 +10,7 @@ const defaultState = {
 function ProductForm(props) {
   let [product, setProduct] = useState(defaultState);
 
-  let onFieldChange = event => {
+  let handleFieldChange = event => {
     const value = event.target.value;
     const name = event.target.name;
     // Remove this when you get it working
